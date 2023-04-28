@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./App.css";
+import Header from './components/Header';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <div>
+      <Header/>
+   </div>
+  )
 }
 
-export default App;
+export default App
+
+
+/*
+Header
+     hamberger
+     Logo
+     Search icon and field
+     Profile icon and details
+  Sidebar
+     Home
+     Subscription
+     Channels
+  Main Body
+      Categories Buttons
+      Main body for vedio Container
+          vedio cards--> by clicking  it will open up a different page for playing vedio on a new page (/watch)
+            vedio image
+            watch count
+            Day of posting
+
+           /watch
+                 playing vedio
+                 comments
+                 suggestion vedio
+
+*/
