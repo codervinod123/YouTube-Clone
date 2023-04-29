@@ -4,7 +4,7 @@ import Vediocontainer from './Vediocontainer'
 
 const Maincontainer = () => {
   return (
-    <div>
+    <div className='col-span-10'>
         <Category/>
         <Vediocontainer/>
     </div>

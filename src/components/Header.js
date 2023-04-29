@@ -29,6 +29,7 @@ const Header = () => {
             <input 
                  type="text"
                  className='border-[1px] border-gray-800 rounded-l-full p-2 focus:outline-none px-4'
+                 placeholder='Search'
              />
             <button className='border-[1px] border-gray-800 rounded-r-full p-2 px-4'>
                <CiSearch fontSize={"20px"}/>
