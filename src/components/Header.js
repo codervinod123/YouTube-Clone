@@ -1,62 +1,86 @@
 import React from 'react'
-import logo_light_theme from "../assets/logo_light_theme.webp";
-import userImage from "../assets/image_vinod.jpg";
-import  {RxHamburgerMenu}  from 'react-icons/rx';
-import  {CiSearch}  from 'react-icons/ci';
-import  {FaUserCircle}  from 'react-icons/fa';
-import  {IoIosNotificationsOutline}  from 'react-icons/io';
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import logo_dark from "../assets/logo_dark_theme.webp"
+import { TfiSearch } from "react-icons/tfi";
+import {MdKeyboardVoice} from "react-icons/md"
+import {FaUserCircle} from "react-icons/fa"
+import {IoMdNotificationsOutline} from "react-icons/io"
+import {RiVideoAddLine} from "react-icons/ri"
 
 const Header = () => {
   return (
-    <div className='grid grid-flow-col justify-between items-center shadow-lg px-6 py-2'>
-         
-         <div className='flex items-center col-span-1'>
-            <RxHamburgerMenu 
-               fontSize={"40px"}
-               className="rounded-full p-2 hover:bg-gray-500 ease-in-out duration-300 hover:text-white"
-            />
-            <img 
-              className="w-52 pl-4 lg:w-36" 
-               src={logo_light_theme} 
-               alt="light_logo" 
-               title='logo'
-            />
-         </div>
+    <div className='flex justify-between items-center px-4 py-2 shadow-lg h-[4.62rem] transition-all duration-500 w-full top-0 z-10 bg-zinc-900 sticky'>
+          <div className='left-items flex items-center'>
+             <button className="rounded-full hover:bg-zinc-700 p-2 text-white">
+               <RxHamburgerMenu
+                className='cursor-pointer'
+                title='hamberger menu'
+                size="1.5rem"
+               />
+             </button>
+             <div className='cursor-pointer flex items-center'>
+                <a href="/">
+                  <img 
+                  src={logo_dark} 
+                  alt="logo"
+                  className='pl-4 w-32'
+                  title='logo'  
+                  />
+                </a>
+             </div>
+          </div>
 
+          <div className='w-3/5 flex-1 flex ml-16 items-center relative'>
+              <div className='flex items-center rounded-l-3xl bg-zinc-800 border border-gray-500 ml-10 w-full'>
+                 <input 
+                    type="text"
+                    name='searchbar'
+                    placeholder='Search'
+                    className='bg-zinc-800 rounded-3xl p-2 pl-8 w-full focus:outline-none text-white'
+                     />
+              </div>
 
-         <div className='flex justify-center col-span-9'>
-            <input 
-                 type="text"
-                 className='border-[1px] border-gray-800 rounded-l-full p-2 focus:outline-none px-4'
-                 placeholder='Search'
-             />
-            <button className='border-[1px] border-gray-800 rounded-r-full p-2 px-4'>
-               <CiSearch fontSize={"20px"}/>
-            </button>
-         </div>
+              <div className='bg-zinc-800 border-l border-gray-500 px-8 p-3 rounded-r-3xl cursor-pointer text-white'>
+                 <TfiSearch
+                    size="1.2rem"
+                    className=''
+                 />
+              </div>
 
+              <div className='p-2 ml-4 cursor-pointer hover:bg-zinc-700 rounded-full text-white'>
+                <MdKeyboardVoice
+                  size="1.5rem" className=''
+                />
+              </div> 
 
-         <div className='flex gap-3 col-span-2'>
+          </div>
 
-            <FaUserCircle 
-                fontSize={"40px"}
-                className="rounded-full p-2 hover:bg-gray-500 ease-in-out duration-300 hover:text-white"
-              />
-            <IoIosNotificationsOutline
-               fontSize={"40px"}
-               className="rounded-full p-2 hover:bg-gray-500 ease-in-out duration-300 hover:text-white"            
-            />
+          <div className='flex ml-10'>
+  
+          <div className='p-2 ml-4 cursor-pointer hover:bg-zinc-700 rounded-full text-white'>
+                 <RiVideoAddLine
+                    size="1.5rem"
+                    className=''
+                 />
+              </div>
 
-            <img 
-               className='h-8 rounded-full' 
-               src={userImage}
-               alt="user_image"
-               title='logo'
-            />
-
-         </div>
-
+              <div className='p-2 ml-4 cursor-pointer hover:bg-zinc-700 rounded-full text-white'>
+                 <IoMdNotificationsOutline
+                    size="1.5rem"
+                    className=''
+                 />
+              </div>
+             <div className='p-2 ml-4 cursor-pointer hover:bg-zinc-700 rounded-full text-white'>
+                 <FaUserCircle
+                    size="1.5rem"
+                    className=''
+                 />
+              </div>
+             
+             
+             
+             
+          </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import Maincontainer from './Maincontainer'
 import Sidebar from './Sidebar'
+import Maincontainer from './Maincontainer'
 
 const Body = () => {
   return (

@@ -1,12 +1,12 @@
 import React from 'react'
 import Category from './Category'
-import Vediocontainer from './Vediocontainer'
+import Shimmer from './Shimmer'
 
 const Maincontainer = () => {
   return (
-    <div className='col-span-10'>
+    <div className='col-span-12'>
         <Category/>
-        <Vediocontainer/>
+        <Shimmer/>
     </div>
   )
 }
