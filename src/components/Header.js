@@ -6,12 +6,21 @@ import {MdKeyboardVoice} from "react-icons/md"
 import {FaUserCircle} from "react-icons/fa"
 import {IoMdNotificationsOutline} from "react-icons/io"
 import {RiVideoAddLine} from "react-icons/ri"
+import {useDispatch} from "react-redux"
+import { toggleSidebarMenu } from '../utils/sidebarSlice';
 
 const Header = () => {
+
+   const dispatch=useDispatch();
+
+   const handleToggleClick=()=>{
+      dispatch(toggleSidebarMenu());
+   }
+  
   return (
     <div className='flex justify-between items-center px-4 py-2 shadow-lg h-[4.62rem] transition-all duration-500 w-full top-0 z-10 bg-zinc-900 sticky'>
           <div className='left-items flex items-center'>
-             <button className="rounded-full hover:bg-zinc-700 p-2 text-white">
+             <button onClick={()=>handleToggleClick()} className="rounded-full hover:bg-zinc-700 p-2 text-white">
                <RxHamburgerMenu
                 className='cursor-pointer'
                 title='hamberger menu'
@@ -40,7 +49,7 @@ const Header = () => {
                      />
               </div>
 
-              <div className='bg-zinc-800 border-l border-gray-500 px-8 p-3 rounded-r-3xl cursor-pointer text-white'>
+              <div className='bg-zinc-800 border-gray-500 px-4 p-3 rounded-r-3xl cursor-pointer text-white'>
                  <TfiSearch
                     size="1.2rem"
                     className=''

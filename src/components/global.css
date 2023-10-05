@@ -1,0 +1,14 @@
+.sidebar{
+    overflow: scroll;
+}
+
+.sidebar::-webkit-scrollbar{
+    width: 5px;
+   
+   background-color: #aaa;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb{
+    background: palevioletred;
+}
